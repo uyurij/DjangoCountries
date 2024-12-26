@@ -15,7 +15,7 @@
     {{ block.super }}
 
     <h2> Имя: {{ country.name }} </h2>
-    <div>
+    <!-- <div>
         Бренд: {{ item.brand | default:"Не известен" }}
     </div>
     <div>
@@ -33,8 +33,8 @@
     </ul>
     {% else %}
         <br>Данных по цветам нет
-    {% endif %}
+    {% endif %} -->
     <br><br>
-    <p> <a href="{% url "Countries" %}"> Назад к списку стран </a></p>
+    <p> <a href="{% url "countries" %}"> Назад к списку стран </a></p>
 
 {% endblock %}

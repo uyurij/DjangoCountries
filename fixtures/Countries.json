@@ -1,0 +1,42 @@
+[
+    {
+        "model": "Countries.country",
+        "pk": 1,
+        "fields": {
+            "name": "Кроссовки",
+            "brand": "abibas",
+            "count": 10,
+            "description": "Удобные кроссовки для бега"
+        }
+    },
+    {
+        "model": "Countries.country",
+        "pk": 2,
+        "fields": {
+            "name": "Coca-cola bottle",
+            "brand": "Coca-cola",
+            "count": 5,
+            "description": "Вкусный напиток"
+        }
+    },
+    {
+        "model": "Countries.country",
+        "pk": 3,
+        "fields": {
+            "name": "Кепка",
+            "brand": "Текстиль",
+            "count": 12,
+            "description": "Удобный головной убор"
+        }
+    },
+    {
+        "model": "Countries.country",
+        "pk": 4,
+        "fields": {
+            "name": "Картофель фри",
+            "brand": "где вкусно",
+            "count": 0,
+            "description": "Вкусная картошка, большая порция"
+        }
+    }
+]

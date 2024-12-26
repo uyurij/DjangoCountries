@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %} Countries {% endblock  %}
+{% block title %} countries list {% endblock  %}
 
 {% block content %}
     {{ block.super }}
     
     <h2> Список стран </h2>
 
-    <div class="Countries">
-        {% for country in Countries %}
+    <div class="countries">
+        {% for country in countries %}
         <div class="country">
             <a href="{% url "country-detail" country.id %}"> 
-            <p class="Countries_name"> {{ country.id }} {{ country.name }}</p>
+                <p class="countries_name"> {{ country.id }} {{ country.name }}</p>
                 <!-- <p>Бренд: {{ item.brand }}</p> 
                 <p>Описание товара:</p>
                 <p>{{ item.description }}</p> -->  
-                </a>
+            </a>
 
         </div>
         {% endfor %}
