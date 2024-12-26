@@ -27,7 +27,7 @@ def about(request):
     email: <b>uyurij@yandex.ru</b></p>
     <nav>
     <ul>
-      <li><a href="items">Товары</a></li>
+      <li><a href="countries">Страны</a></li>
       <li><a href="/">Главная</a></li>
     </ul>
   </nav>

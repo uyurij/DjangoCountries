@@ -25,5 +25,5 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('country/<int:country_id>', views.get_country, name='country-detail'),
     path('countries', views.get_countries, name='countries-list'),
-] #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
