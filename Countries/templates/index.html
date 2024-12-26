@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block header%} {% include "header.html" %} {%endblock%}
+{% block content %}
+<h1>Приветствую!</h1>
+<br>
+<img width="50px", src="{% static "images/django.svg" %}"><br>
+Это главная страница сайта<br>
+<i>сайт в разработке</i>
+<p><a href = 'Countries.html'>Страница стран</a>
+    <nav>
+        <ul>
+          <li><a href="about">О себе</a></li>
+          <li><a href="Countries">Страны</a></li>
+        </ul>
+      </nav>   
+{% endblock %}
+{% block footer %} {% include "footer.html" %} {% endblock footer %}
