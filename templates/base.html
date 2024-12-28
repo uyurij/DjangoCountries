@@ -8,14 +8,14 @@
         {% block title %} 
             {% if request.user.is_authenticated %}
               Welcome, {{request.user.username }}
-            {% else %}
                 <form method="post" action="url">{% csrf_token %}
                     <input name="username"  type="text" placeholder="username">
                     <input name="password"  type="password" placeholder="password">
                     <button type="submit">login</button>
                 </form>
+                {% else %}
             {% endif  %}
-        {% endblock  %} 
+            {% endblock  %} 
     </title>
     {% block style %}
         <link rel="stylesheet" href="{% static "css/style.css" %}">
