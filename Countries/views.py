@@ -3,11 +3,6 @@ from django.http import HttpResponse, HttpResponseNotFound
 from .models import country
 from django.core.exceptions import ObjectDoesNotExist
 
-Countries = [
-    {"id": 1, "country": "Aruba", "languages": "Dutch"},
-    {"id": 2, "country": "Afghanistan", "languages": "Balochi"},
-    ]
-
 def home(request):
     context = {
         "name": "Горбунов Юрий Геннадьевич",
