@@ -1,15 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse #, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound
 from .models import country
 from django.core.exceptions import ObjectDoesNotExist
 
 Countries = [
-    {"id": 1, "name": "Кроссовки abibas", "quantity": 5},
-    #{"id": 1, "name": "Куртка кожаная", "quantity": 2},
-    #{"id": 1, "name": "Coca-cola 1 литр", "quantity": 12},
-    #{"id": 1, "name": "Картофель фри", "quantity": 0},
-    #{"id": 8, "name": "Кепка", "quantity": 124},
-]
+    {"id": 1, "country": "Aruba", "languages": "Dutch"},
+    {"id": 1, "country": "Afghanistan", "languages": "Balochi"},
+    ]
 
 def home(request):
     context = {

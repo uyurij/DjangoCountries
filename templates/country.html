@@ -15,25 +15,7 @@
     {{ block.super }}
 
     <h2> Имя: {{ country.country }} </h2>
-    <!-- <div>
-        Бренд: {{ item.brand | default:"Не известен" }}
-    </div>
-    <div>
-        Количество: {{ item.count | default:"Товар отсутствует" }}
-    </div>
-    <div>
-        Описание: {{ item.description }}
-    </div>
-    <i>Цвета:</i>
-    {% if colors %}
-    <ul class='ul_no_mark'>
-        {% for color in colors %}
-            <li><div class='div_color' style='background-color: {{ color.name }};'></div>&nbsp;&nbsp; {{ color.name }}</li>
-        {% endfor %}
-    </ul>
-    {% else %}
-        <br>Данных по цветам нет
-    {% endif %} -->
+   
     <br><br>
     <p> <a href="{% url "countries-list" %}"> Назад к списку стран </a></p>
 
