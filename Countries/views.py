@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound
 from .models import country
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib import auth
+from django.shortcuts import redirect
+
+
 
 def home(request):
     context = {
@@ -41,5 +45,29 @@ def get_countries(request):
         "countries": countries
     }
     return render(request, "countries.html", context)
+
+def login(request):
+   if request.method == 'POST':
+       username = request.POST.get("username")
+       password = request.POST.get("password")
+       print("username =", username)
+       print("password =", password)
+
+def login(request):
+   if request.method == 'POST':
+       username = request.POST.get("username")
+       password = request.POST.get("password")
+       # print("username =", username)
+       # print("password =", password)
+       user = auth.authenticate(request, username=username, password=password)
+       if user is not None:
+           auth.login(request, user)
+       else:
+           # Return error message
+           pass
+   return redirect('home')
+
+
+
 
 

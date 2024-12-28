@@ -9,5 +9,6 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('country/<int:country_id>', views.get_country, name='country-detail'),
     path('countries', views.get_countries, name='countries-list'),
+    path('url/', views.login, name='login')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

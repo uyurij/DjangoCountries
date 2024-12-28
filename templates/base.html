@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 
         {% block title %} 
-            Document 
+            {% if request.user.is_authenticated %}
+              Welcome, {{request.user.username }}
+            {% else %}
+                <form method="post" action="url">{% csrf_token %}
+                    <input name="username"  type="text" placeholder="username">
+                    <input name="password"  type="password" placeholder="password">
+                    <button type="submit">login</button>
+                </form>
+            {% endif  %}
         {% endblock  %} 
     </title>
     {% block style %}
