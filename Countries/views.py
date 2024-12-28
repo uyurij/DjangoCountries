@@ -5,7 +5,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 Countries = [
     {"id": 1, "country": "Aruba", "languages": "Dutch"},
-    {"id": 1, "country": "Afghanistan", "languages": "Balochi"},
+    {"id": 2, "country": "Afghanistan", "languages": "Balochi"},
     ]
 
 def home(request):
