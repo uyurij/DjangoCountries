@@ -1,10 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound
-from .models import country
+from .models import Country
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import auth
 from django.shortcuts import redirect
-
 
 
 def home(request):
@@ -32,7 +31,7 @@ def about(request):
 
 def get_country(request, country_id: int):
     try:
-        country = country.objects.get(id=country_id)
+        country = Country.objects.get(id=country_id)
     except ObjectDoesNotExist:
         return HttpResponseNotFound(f"country with id={country_id} not found")
     else:
@@ -40,7 +39,7 @@ def get_country(request, country_id: int):
         return render(request, "country.html", context)
     
 def get_countries(request):
-    countries = country.objects.all()
+    countries = Country.objects.all()
     context = {
         "countries": countries
     }
